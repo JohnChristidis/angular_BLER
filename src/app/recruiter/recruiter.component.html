@@ -1,0 +1,22 @@
+<div>
+  <h3>Insert secretary's username</h3>
+  <input type="text" name="username" [(ngModel)]="username">
+</div>
+<div>
+  <h3>Insert student's id</h3>
+  <input type="text" name="id" [(ngModel)]="id">
+</div>
+<div >
+  <h3>Insert passcode</h3>
+  <input type="number" name="passcode" [(ngModel)]="passcode">
+</div>
+<div>
+  <button type="button" (click)='getStudent(username,id,passcode)' name="button">See Results</button>
+</div>
+
+<div>
+<span> {{student.idNumber}}-{{student.name}}-{{student.surname}}-{{student.docType}}</span>
+<ul *ngFor='let degree of student.degrees'>
+  <li>{{degree.EQFLevel}}-{{degree.department}}-{{degree.grade}}-{{degree.organization}}-{{degree.title}}-{{degree.year}}</li>
+</ul>
+</div>
